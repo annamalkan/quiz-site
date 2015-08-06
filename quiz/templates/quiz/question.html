@@ -28,9 +28,10 @@
 			<br>
 			<input type="radio" name="answers" value="incorrect" checked>
 			{{ answer3 }}
-			<br>
+			<br><br>
 
-			<input class="myButton" type="submit" value="Submit">
+
+			<p><a class="myButton" href="{% url "completed_page" quiz_slug %}">Next</a></p>
 
 		<h1>Question 2</h1>
 			<p class="question_text">

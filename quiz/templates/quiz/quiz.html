@@ -14,7 +14,7 @@
 			<h2>
 			{{ quiz.description }}
 			</h2>
-			<input class="myButton" type="submit" value="Start quiz">
+			<p><a class ="myButton" href="{% url "question_page" quiz_slug 1 %}">Start quiz</a></p>
 			
 	</body>
 </html>

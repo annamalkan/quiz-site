@@ -26,6 +26,9 @@
 				<li>Scientifc masterminds</li>
 				<li>Sports stars</li>
 				<li>Political heroes</li>
+		{% for quiz_slug, quiz in quizzes.items %}
+		<p>{{ quiz.name }}</p>
+		{% endfor %}
 
 		<p class="photo_credit">
 			Photographer unknown. Courtesy of the D.C. Public Library historic image collection.

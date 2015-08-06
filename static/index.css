@@ -1,0 +1,115 @@
+.bodybackgroundimage {
+	background: white;
+	opacity: 0.7;
+	font: 12pt/1.4 "Roboto", serif;
+	font-weight: 300;
+	max-width: 640px;
+	margin: 20px auto;
+	padding:20px;
+}
+#indexhtml { 
+  background: url(photos/NACW-1946.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+#endquizhtml { 
+  background: url(photos/congratulations.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+#indexh1 {
+	
+	color: black;
+	font: "Roboto", serif;
+	font-size: 30pt;
+	font-weight: 300;
+	margin-bottom: 20px;
+}
+
+#introparagraph {
+	font-weight:300;
+}
+
+h2 {
+	font: "Roboto", serif;
+	font-size: 20pt;
+	font-weight: 200;
+
+}
+
+.photo_credit {
+	font: "Roboto", serif;
+	font-size:10pt;
+}
+
+body {
+	background: #f0ffff;
+	font: 12pt/1.4 "Roboto", serif;
+	font-weight: 200;
+	max-width: 620px;
+	margin: auto;
+	padding:20px;
+}
+
+h1 {
+	
+	color: gray;
+	font: "Roboto", serif;
+	font-size: 26pt;
+	font-weight: 200;
+	margin-bottom: 20px;
+}
+
+
+.circular {
+	width: 400px;
+	height: 400px;
+	border-radius: 450px;
+	-webkit-border-radius: 450px;
+	-moz-border-radius: 450px;
+	display: block;
+    margin-left: auto;
+    margin-right: auto; 
+	}
+.question_text {
+	font: "Roboto", serif;
+	font-size: 20pt;
+	font-weight: 200;
+	margin-top: 30px;
+}
+input {
+	font: "Roboto", serif;
+	font-size: 20pt;
+	font-weight: 200;
+	margin-top: 30px;
+}
+
+.myButton {
+   background-color:#e6e6fa  ;
+   -moz-border-radius:28px;
+   -webkit-border-radius:28px;
+   border-radius:28px;
+   border:1px solid #e6e6fc  ;
+   display:inline-block;
+   cursor:pointer;
+   color: black  ;
+   font-family:Roboto;
+   font-size:20px;
+   padding:16px 31px;
+   text-decoration:none;
+   text-shadow:0px 1px 0px #e6e6fa  ;
+}
+.myButton:hover {
+   background-color:#e6e6fa  ;
+}
+.myButton:active {
+   position:relative;
+   top:1px;
+}
+

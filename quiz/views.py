@@ -33,7 +33,7 @@ def quiz(request, slug):
 def question(request, slug, number):
 	context = {
 		"question_number": number,
-	    "question": u"	This is Kathrine Switzer. Which marathon did she become the first woman to complete as a registered participant in 1967?",
+	    "question": u"	This is Kathrine Switzer. Which marathon did she become the first woman to complete as a registered participant in 1967, five years before women were officially allowed to enter?",
 		"answer1": u"Boston Marathon",
 	   	"answer2": u"London Marathon",
 	    "answer3": u"New York City Marathon",

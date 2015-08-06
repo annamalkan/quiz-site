@@ -8,9 +8,9 @@
 	</head>
 
 	<body>
-		<h1>Question 1</h1>
+		<h1>{{ question_number }}.</h1>
 			<p class="question_text">
-			This is Kathrine Switzer. Which marathon did she become the first woman to complete as a registered participant in 1967?
+			{{ question }}
 			</p>
 			<img class="circular" src="/static/photos/marathon-switzer-apimages.jpg">
 			
@@ -20,11 +20,14 @@
 			</p>
 			<br>
 
-			<input type="radio" name="answers" value="correct" checked>Boston Marathon
+			<input type="radio" name="answers" value="correct" checked>
+			{{ answer1 }}
 			<br>
-			<input type="radio" name="answers" value="incorrect" checked>New York City Marathon
+			<input type="radio" name="answers" value="incorrect" checked>
+			{{ answer2 }}
 			<br>
-			<input type="radio" name="answers" value="incorrect" checked>London Marathon
+			<input type="radio" name="answers" value="incorrect" checked>
+			{{ answer3 }}
 			<br>
 
 			<input class="myButton" type="submit" value="Submit">

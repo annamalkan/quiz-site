@@ -29,7 +29,16 @@ def quiz(request, slug):
 		"quiz_slug": slug,
 	}
 	return render(request, "quiz/quiz.html", context)
-def question(request):
-	return render(request, "quiz/question.html")
+
+def question(request, slug, number):
+	context = {
+		"question_number": number,
+	    "question": u"	This is Kathrine Switzer. Which marathon did she become the first woman to complete as a registered participant in 1967?",
+		"answer1": u"Boston Marathon",
+	   	"answer2": u"London Marathon",
+	    "answer3": u"New York City Marathon",
+	    "quiz_slug": slug,
+	}
+	return render(request, "quiz/question.html", context)
 def completed(request):
 	return render(request, "quiz/completed.html")

@@ -22,8 +22,8 @@
 			</p>
 		<br>
 		<h2>Quizzes:</h2>
-		{% for quiz_slug, quiz in quizzes.items %}
-		<p><a href="{%url "quiz_page" quiz_slug%}">
+		{% for quiz in quizzes %}
+		<p><a href="{%url "quiz_page" quiz.slug %}">
 			{{ quiz.name }}
 			</a></p>
 		{% endfor %}

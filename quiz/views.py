@@ -12,12 +12,15 @@ def startpage(request):
 	return render(request, "quiz/startpage.html", context)
 def quiz(request, slug):
 	context = {
-		"quiz": quizzes[slug],
-		"quiz_slug": slug,
+		"quiz": Quiz.objects.get(slug=slug),
 	}
 	return render(request, "quiz/quiz.html", context)
 
 def question(request, slug, number):
+	number = int(number)
+	quiz = Quiz.objects.get(slug=slug)
+	questions = quiz.questions.all()
+	question = questions[number - 1]
 	context = {
 		"question_number": number,
 	    "question": u"	This is Kathrine Switzer. Which marathon did she become the first woman to complete as a registered participant in 1967, five years before women were officially allowed to enter?",

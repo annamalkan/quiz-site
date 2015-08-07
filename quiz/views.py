@@ -1,26 +1,13 @@
 # coding: utf-8
 
 from django.shortcuts import render
-quizzes = {
-	"klassiker": {
-   		"name": u"Political heroes",
-	   	"description": u"Hur bra kan du dina klassiker?"
-	},
-	"fotboll": {
-	   	"name": u"Sports stars",
-	   	"description": u"How many of these spectacular sportswomen are you familiar with? Find out and learn more about all of them by completing this quiz!"
-	},
-	"kanda-hackare": {
-	    	"name": u"Scientific masterminds",
-	    	"description": u"Hackerhistoria är viktigt, kan du den?"	},
-}
-
+from quiz.models import Quiz
 
 # Create your views here.
 
 def startpage(request):
 	context ={
-		"quizzes":quizzes,
+		"quizzes": Quiz.objects.all(),
 	}
 	return render(request, "quiz/startpage.html", context)
 def quiz(request, slug):

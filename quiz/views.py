@@ -32,13 +32,13 @@ def question(request, slug, number):
 			return redirect("completed_page", quiz.slug)
 		else:
 			return redirect("question_page", quiz.slug, number +1)
-			
+
 	question = questions[number - 1]
-	image = question.image
+	#image = question.image
 	context = {
 		"question_number": number,
 	    "question": question.question,
-	    "image": question.image,
+	    "image_link": question.image_link,
 	   	"answer1": question.answer1,
 	   	"answer2": question.answer2,
 	    "answer3": question.answer3,
@@ -47,10 +47,18 @@ def question(request, slug, number):
 	return render(request, "quiz/question.html", context)
 
 def completed(request, slug):
+	quiz= Quiz.objects.get(slug=slug)
+	questions=quiz.questions.all()
+	saved_answers=request.session[slug]
+	num_correct_answers=0
+	for counter, question in enumerate(questions):
+		if question.correct==saved_answers[str(counter+1)]:
+			num_correct_answers+=1
+
 	context = {
-	    "correct": 12,
-	    "total": 20,
-		"quiz_slug": slug,
+	    "correct": num_correct_answers,
+	    "total": questions.count(),
+		"quiz_slug": quiz,
 	}
 	return render(request, "quiz/completed.html", context)
 

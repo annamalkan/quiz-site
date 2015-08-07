@@ -12,27 +12,27 @@
 			<p class="question_text">
 			{{ question }}
 			</p>
-			<img class="circular" > {{ image }}
+			<img class="circular" src="{{ image_link }}">
 			
 			<br>
-			<p class="photo_credit">
+			<!-- <p class="photo_credit">
 			AP Images
-			</p>
+			</p> -->
 			<br>
 			<form action="{%url "question_page" quiz.slug question_number %}" method="post">
 			{% csrf_token %}
 				<label>
-				<input type="radio" name="answers" value="1" checked>
+				<input type="radio" name="answer" value="1" checked>
 				{{ answer1 }}
 				</label>
 				<br>
 				<label>
-				<input type="radio" name="answers" value="2" checked>
+				<input type="radio" name="answer" value="2" checked>
 				{{ answer2 }}
 				</label>
 				<br>
 				<label>
-				<input type="radio" name="answers" value="	3" checked>
+				<input type="radio" name="answer" value="	3" checked>
 				{{ answer3 }}
 				</label>
 				<br><br>

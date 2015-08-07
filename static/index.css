@@ -75,7 +75,9 @@ h1 {
 .circular {
 	width: 400px;
 	height: 400px;
-	border-radius: 450px;
+	border-color: black;
+	border-width: 25px;
+	border-radius: 650px;
 	-webkit-border-radius: 450px;
 	-moz-border-radius: 450px;
 	display: block;

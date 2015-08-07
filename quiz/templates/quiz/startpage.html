@@ -8,9 +8,9 @@
 	</head>
 
 	<body class="bodybackgroundimage">
-		<h1 id="indexh1">QUIZZES ABOUT BADASS WOMEN</h1>
+		<h1 class="indexh1">BADASS WOMEN<br> YOU SHOULD KNOW</h1>
 			
-		<br>
+<!-- 		<br>
 			<p>
 			Growing up we learned about a lot of important people in school. We learned about people who started wars and ended them, people who ruled countries and liberated them. We learned of people who wrote books we still read today, painted paintings that hang on the walls of prominent museums and those who wrote music that is still performed in the world's most spectacular concert halls. 
 			</p>
@@ -21,11 +21,11 @@
 			The quizzes on this page aim to teach you more about a few of the many women often forgotten in the history books.
 			</p>
 		<br>
-		<h2>Quizzes:</h2>
+		<h2>Quizzes:</h2> -->
 		{% for quiz in quizzes %}
-		<p><a href="{%url "quiz_page" quiz.slug %}">
+		<h1 id=quizlist ><a href="{%url "quiz_page" quiz.slug %}">
 			{{ quiz.name }}
-			</a></p>
+			</a></h1>
 		{% endfor %}
 
 		<p class="photo_credit">

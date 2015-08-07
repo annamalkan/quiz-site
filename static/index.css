@@ -23,13 +23,14 @@
   background-size: cover;
 }
 
-#indexh1 {
+.indexh1 {
 	
 	color: black;
 	font: "Roboto", serif;
-	font-size: 30pt;
-	font-weight: 300;
+	font-size: 60pt;
+	font-weight: 100;
 	margin-bottom: 20px;
+	text-align: center;
 }
 
 #introparagraph {
@@ -41,6 +42,12 @@ h2 {
 	font-size: 20pt;
 	font-weight: 200;
 
+}
+#quizlist {
+	font: "Roboto", serif;
+	font-size: 40pt;
+	font-weight: 200;
+	text-align: center;
 }
 
 .photo_credit {
@@ -83,6 +90,8 @@ h1 {
 	display: block;
     margin-left: auto;
     margin-right: auto; 
+    max-width: 100%;
+    max-height: 100%;
 	}
 .question_text {
 	font: "Roboto", serif;

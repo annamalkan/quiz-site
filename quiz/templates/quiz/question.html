@@ -19,18 +19,25 @@
 			AP Images
 			</p>
 			<br>
-
-			<input type="radio" name="answers" value="correct" checked>
-			{{ answer1 }}
-			<br>
-			<input type="radio" name="answers" value="incorrect" checked>
-			{{ answer2 }}
-			<br>
-			<input type="radio" name="answers" value="incorrect" checked>
-			{{ answer3 }}
-			<br><br>
-
-			<p><a class="myButton" href="{% url "question_page" quiz.slug question_number|add:1 %}">Next</a></p>
+			<form action="{%url "question_page" quiz.slug question_number %}" method="post">
+			{% csrf_token %}
+				<label>
+				<input type="radio" name="answers" value="1" checked>
+				{{ answer1 }}
+				</label>
+				<br>
+				<label>
+				<input type="radio" name="answers" value="2" checked>
+				{{ answer2 }}
+				</label>
+				<br>
+				<label>
+				<input type="radio" name="answers" value="	3" checked>
+				{{ answer3 }}
+				</label>
+				<br><br>
+				<p><button type="submit" class="myButton">Next</button></p>
+			</form>
 		
 
 		

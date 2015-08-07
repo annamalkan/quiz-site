@@ -12,7 +12,7 @@
 			<p class="question_text">
 			{{ question }}
 			</p>
-			<img class="circular" src="/static/photos/marathon-switzer-apimages.jpg">
+			<img class="circular" > {{ image }}
 			
 			<br>
 			<p class="photo_credit">
@@ -30,8 +30,8 @@
 			{{ answer3 }}
 			<br><br>
 
-
-			<p><a class="myButton" href="{% url "completed_page" quiz_slug %}">Next</a></p>
+			<p><a class="myButton" href="{% url "question_page" quiz.slug question_number|add:1 %}">Next</a></p>
+		
 
 		
 

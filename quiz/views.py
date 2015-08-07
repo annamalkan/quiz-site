@@ -21,13 +21,15 @@ def question(request, slug, number):
 	quiz = Quiz.objects.get(slug=slug)
 	questions = quiz.questions.all()
 	question = questions[number - 1]
+	image = question.image
 	context = {
 		"question_number": number,
-	    "question": u"	This is Kathrine Switzer. Which marathon did she become the first woman to complete as a registered participant in 1967, five years before women were officially allowed to enter?",
-		"answer1": u"Boston Marathon",
-	   	"answer2": u"London Marathon",
-	    "answer3": u"New York City Marathon",
-	    "quiz_slug": slug,
+	    "question": question.question,
+	    "image": question.image,
+	   	"answer1": question.answer1,
+	   	"answer2": question.answer2,
+	    "answer3": question.answer3,
+	    "quiz": quiz,
 	}
 	return render(request, "quiz/question.html", context)
 

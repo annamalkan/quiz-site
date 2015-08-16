@@ -26,6 +26,8 @@
 		<h1 id=quizlist ><a href="{%url "quiz_page" quiz.slug %}">
 			{{ quiz.name }}
 			</a></h1>
+		{% empty %}
+			<h1> <em> There are no quizzes added yet </em> </h1>
 		{% endfor %}
 
 		<p class="photo_credit">

@@ -23,8 +23,8 @@
   background-size: cover;
 }
 
-#404html { 
-  background: url(photos/this_is_awkward.jpg) no-repeat center center fixed; 
+#html404 { 
+  background: url(awkward_pineapple.jpg) no-repeat center center fixed; 
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -50,6 +50,13 @@ h2 {
 	font-size: 20pt;
 	font-weight: 200;
 
+}
+
+#htmlh2 {
+	font: "Roboto", serif;
+	font-size: 20pt;
+	font-weight: 200;
+	text-align: center;
 }
 #quizlist {
 	font: "Roboto", serif;
@@ -102,6 +109,7 @@ h1 {
     max-height: 100%;
     object-fit: cover;
 }
+
 
 .question_text {
 	font: "Roboto", serif;

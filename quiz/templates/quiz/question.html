@@ -23,17 +23,17 @@
 			<form action="{%url "question_page" quiz.slug question_number %}" method="post">
 			{% csrf_token %}
 				<label>
-				<input type="radio" name="answer" value="1" checked>
+				<input type="radio" name="answer" value="1">
 				{{ answer1 }}
 				</label>
 				<br>
 				<label>
-				<input type="radio" name="answer" value="2" checked>
+				<input type="radio" name="answer" value="2">
 				{{ answer2 }}
 				</label>
 				<br>
 				<label>
-				<input type="radio" name="answer" value="	3" checked>
+				<input type="radio" name="answer" value="	3">
 				{{ answer3 }}
 				</label>
 				<br><br>

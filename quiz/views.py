@@ -4,6 +4,8 @@ from django.shortcuts import render
 from quiz.models import Quiz
 from django.shortcuts import redirect
 from django.http import Http404
+from django.shortcuts import render_to_response
+from django.template import RequestContext
 
 # Create your views here.
 
@@ -62,8 +64,7 @@ def question(request, slug, number):
 	}
 
 	if number > questions.count():
-		raise Http404
-		
+		raise Http404	
 	return render(request, "quiz/question.html", context)
 
 def completed(request, slug):
@@ -85,7 +86,11 @@ def completed(request, slug):
 	}
 	return render(request, "quiz/completed.html", context)
 
-
+def handler404(request):
+    response = render_to_response('404.html', {},
+            context_instance=RequestContext(request))
+    response.status_code = 404
+    return response
 
 
 

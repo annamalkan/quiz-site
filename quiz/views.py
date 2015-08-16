@@ -34,8 +34,6 @@ def question(request, slug, number):
 		"quiz": quiz,
 	}
 	
-	if number > questions.count():
-		raise Http404
 
 	quiz = Quiz.objects.get(slug=slug)
 	questions = quiz.questions.all()
@@ -62,6 +60,10 @@ def question(request, slug, number):
 	    "answer3": question.answer3,
 	    "quiz": quiz,
 	}
+
+	if number > questions.count():
+		raise Http404
+		
 	return render(request, "quiz/question.html", context)
 
 def completed(request, slug):

@@ -61,6 +61,7 @@ def question(request, slug, number):
 	   	"answer2": question.answer2,
 	    "answer3": question.answer3,
 	    "quiz": quiz,
+	    "answerinfo": question.answerinfo,
 	}
 
 	if number > questions.count():

@@ -21,11 +21,11 @@
    				 <li class="completedquestion">{{ question.question }} <br>
    				 	<p class="correctanswer">
    				 	{% if question.correct == 1 %}
-   				 		{{question.answer1}}
+   				 		{{question.answer1}} <a href ="{{question.answerinfo}}"> Read more</a>
    				 	{% elif question.correct == 2 %}
-   				 		{{question.answer2}}
+   				 		{{question.answer2}} <a href ="{{question.answerinfo}}"> Read more</a>
    				 	{% elif question.correct == 3 %}
-   				 		{{question.answer3}}
+   				 		{{question.answer3}} <a href ="{{question.answerinfo}}"> Read more</a>
 					{% endif %}
 					</p>
 				</li>

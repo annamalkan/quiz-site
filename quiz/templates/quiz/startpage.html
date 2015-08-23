@@ -13,7 +13,7 @@
 
 		{% for quiz in quizzes %}
 
-		<h1 id=quizlist ><a href="{%url "quiz_page" quiz.slug %}">
+		<h1 align="center" ><a id="quizname" class="myButton" href="{%url "quiz_page" quiz.slug %}">
 			{{ quiz.name }}
 			</a></h1>
 		{% empty %}

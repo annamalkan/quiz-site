@@ -16,7 +16,9 @@ class Question(models.Model):
 	answer1 = models.CharField(max_length=100)
 	answer2 = models.CharField(max_length=100)
 	answer3 = models.CharField(max_length=100)
+	answerinfo = models.TextField()
 	correct = models.PositiveIntegerField()
+
 	def __unicode__(self):
 		return self.quiz.name + "/ " + self.question
 

@@ -124,6 +124,16 @@ input {
 	margin-top: 30px;
 }
 
+.completedquestion {
+	font-size: 12pt;
+	font-weight: 100;
+}
+
+.correctanswer {
+	font-size: 12pt;
+	font-weight: 300;
+}
+
 .myButton {
    background-color:#e6e6fa  ;
    -moz-border-radius:28px;

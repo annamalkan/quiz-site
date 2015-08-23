@@ -13,12 +13,8 @@
 			<p class="question_text">
 			{{ question }}
 			</p>
-			<img class="circular" src="{{ image_link }}">
-			
+			<img class="circular" src="{{ image_link }}">	
 			<br>
-			<!-- <p class="photo_credit">
-			AP Images
-			</p> -->
 			<br>
 			<form action="{%url "question_page" quiz.slug question_number %}" method="post">
 			{% csrf_token %}
@@ -39,10 +35,10 @@
 				<br><br>
 				<p><button type="submit" class="myButton">Next</button></p>
 			</form>
-		
-
-		
-
-
+		<footer>
+			<p>
+				BY ANNA MALKAN, 2015
+			</p>
+		</footer>
 	</body>
 </html>

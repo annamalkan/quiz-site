@@ -13,6 +13,22 @@
 		<br>
 			<h2>
 			YOUR RESULTS: {{correct}}/{{total}}
+			<br>
+			These are the correct answers:
+			<br>
+			<ol>
+				{% for question in questions %}
+   				 <li>{{ question.question }} <br>
+   				 	{% if question.correct == 1 %}
+   				 		{{question.answer1}}
+   				 	{% elif question.correct == 2 %}
+   				 		{{question.answer2}}
+   				 	{% elif question.correct == 3 %}
+   				 		{{question.answer3}}
+					{% endif %}
+				</li>
+				{% endfor %}
+			</ol>
 		<!-- 	</h2>
 			<ol>
 				<li>Correct/incorrect: Kathrine Switzer ran the Boston Marathon in 1967. She was repeatedly attacked by people while running but also had a group of runners around her fighting off those who tried to stop her from finishing. In 2015 46% of the runners were women. Read more about her <a href="https://en.wikipedia.org/wiki/Kathrine_Switzer">here</a>.</li>
